@@ -29,7 +29,7 @@ router.get('/:id', async (req, res) => {
     });
 
     if (!categoryData) {
-      res.status(404).json({ message: 'No library card found with that id!' });
+      res.status(404).json({ message: 'No category found' });
       return;
     }
 
@@ -40,7 +40,7 @@ router.get('/:id', async (req, res) => {
 });
 
  
-  // create a new category
+  // Create a new category
 
 router.post('/', async (req, res) => {
   try {
@@ -56,7 +56,7 @@ router.post('/', async (req, res) => {
   
 
 
- // update a category by its `id` value
+ // Update a category by its `id` value
 
 router.put('/:id', async (req, res) => {
   try {
@@ -79,7 +79,7 @@ router.put('/:id', async (req, res) => {
 
 
 router.delete('/:id',async (req, res) => {
-  // delete a category by its `id` value
+  // Delete a category by its `id` value
   try {
     const categoryData = await Category.destroy({
       where: {
@@ -88,7 +88,7 @@ router.delete('/:id',async (req, res) => {
     });
 
     if (!categoryData) {
-      res.status(404).json({ message: 'No category found with that id!' });
+      res.status(404).json({ message: 'No category found with id!' });
       return;
     }
 

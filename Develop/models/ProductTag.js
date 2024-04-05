@@ -6,8 +6,8 @@ const Product = require('./Product');
 class ProductTag extends Model { }
 
 ProductTag.init(
+  // Define columns
   {
-    // define columns
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
